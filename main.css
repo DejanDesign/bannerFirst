@@ -3,381 +3,262 @@
 *::before {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   overflow: hidden;
 }
 
 .main {
   width: 100vw;
   height: 100vh;
-  background-color: #171718;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  background-color: rgb(23, 23, 24);
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-.main h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  color: white;
-  z-index: 10;
-}
-
-.main button {
-  width: 15em;
-  height: 5em;
-  position: relative;
-  top: 2em;
-  cursor: pointer;
-  border-radius: 1em;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  border: 2px solid #171718;
-  font-size: 1rem;
-  z-index: 10;
-}
-
-.main button:active {
-  -webkit-box-shadow: 0px 0px 33px 0px #ffffff;
-  box-shadow: 0px 0px 33px 0px #ffffff;
-}
-
-.main .first {
-  position: relative;
-  background-image: url("./fullSize/1.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  -webkit-animation: first 0.6s ease-in-out;
-          animation: first 0.6s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  z-index: 99;
-}
-
-@-webkit-keyframes first {
-  from {
-    top: -100vh;
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 10;
   }
-  to {
-    top: 0;
+  button {
+    width: 15em;
+    height: 5em;
+    position: relative;
+    top: 2em;
+    cursor: pointer;
+    border-radius: 1em;
+    box-shadow: none;
+    border: 2px solid rgb(23, 23, 24);
+    font-size: 1rem;
+    z-index: 10;
+    &:active {
+      -webkit-box-shadow: 0px 0px 33px 0px #ffffff;
+      box-shadow: 0px 0px 33px 0px #ffffff;
+    }
   }
-}
 
-@keyframes first {
-  from {
-    top: -100vh;
+  .first {
+    position: relative;
+    background-image: url("./fullSize/1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease;
+    animation: first 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    @keyframes first {
+      from {
+        top: -100vh;
+      }
+      to {
+        top: 0;
+      }
+    }
+    &:hover {
+      width: 80%;
+      &::after {
+        content: "Action";
+        width: 50%;
+        height: 10%;
+        background-color: rgb(0, 255, 85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+      }
+    }
   }
-  to {
-    top: 0;
+  .second {
+    position: relative;
+    background-image: url("./fullSize/2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease;
+    animation: second 1.3s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    @keyframes second {
+      from {
+        top: -100vh;
+      }
+      to {
+        top: 0;
+      }
+    }
+    &:hover {
+      width: 80%;
+      &::after {
+        content: "Adventure";
+        width: 50%;
+        height: 10%;
+        background-color: rgb(0, 255, 85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+      }
+    }
   }
-}
 
-.main .first:hover {
-  width: 80%;
-}
-
-.main .first:hover::after {
-  content: "Action";
-  width: 50%;
-  height: 10%;
-  background-color: #00ff55;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  color: white;
-}
-
-.main .second {
-  position: relative;
-  background-image: url("./fullSize/2.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  -webkit-animation: second 1.3s ease-in-out;
-          animation: second 1.3s ease-in-out;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  z-index: 99;
-}
-
-@-webkit-keyframes second {
-  from {
-    top: -100vh;
+  .third {
+    position: relative;
+    background-image: url("./fullSize/3.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease;
+    animation: third 1.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    @keyframes third {
+      from {
+        top: -100vh;
+      }
+      to {
+        top: 0;
+      }
+    }
+    &:hover {
+      width: 80%;
+      &::after {
+        content: "Strategy";
+        width: 50%;
+        height: 10%;
+        background-color: rgb(0, 255, 85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+      }
+    }
   }
-  to {
-    top: 0;
+  .fourth {
+    position: relative;
+    background-image: url("./fullSize/4.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease;
+    animation: fourth 0.6s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99;
+    @keyframes fourth {
+      from {
+        top: -100vh;
+      }
+      to {
+        top: 0;
+      }
+    }
+    &:hover {
+      width: 80%;
+      &::after {
+        content: "Strategy";
+        width: 50%;
+        height: 10%;
+        background-color: rgb(0, 255, 85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+      }
+    }
   }
-}
-
-@keyframes second {
-  from {
-    top: -100vh;
+  .fifth {
+    position: relative;
+    background-image: url("./fullSize/5.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 1s ease;
+    animation: fifth 1.4s ease-in-out;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    @keyframes fifth {
+      from {
+        top: -100vh;
+      }
+      to {
+        top: 0;
+      }
+    }
+    &:hover {
+      width: 80%;
+      &::after {
+        content: "Adventure";
+        width: 50%;
+        height: 10%;
+        background-color: rgb(0, 255, 85);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2rem;
+        color: white;
+      }
+    }
   }
-  to {
-    top: 0;
-  }
-}
-
-.main .second:hover {
-  width: 80%;
-}
-
-.main .second:hover::after {
-  content: "Adventure";
-  width: 50%;
-  height: 10%;
-  background-color: #00ff55;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  color: white;
-}
-
-.main .third {
-  position: relative;
-  background-image: url("./fullSize/3.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  -webkit-animation: third 1.1s ease-in-out;
-          animation: third 1.1s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  z-index: 99;
-}
-
-@-webkit-keyframes third {
-  from {
-    top: -100vh;
-  }
-  to {
-    top: 0;
-  }
-}
-
-@keyframes third {
-  from {
-    top: -100vh;
-  }
-  to {
-    top: 0;
-  }
-}
-
-.main .third:hover {
-  width: 80%;
-}
-
-.main .third:hover::after {
-  content: "Strategy";
-  width: 50%;
-  height: 10%;
-  background-color: #00ff55;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  color: white;
-}
-
-.main .fourth {
-  position: relative;
-  background-image: url("./fullSize/4.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  -webkit-animation: fourth 0.6s ease-in-out;
-          animation: fourth 0.6s ease-in-out;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-  z-index: 99;
-}
-
-@-webkit-keyframes fourth {
-  from {
-    top: -100vh;
-  }
-  to {
-    top: 0;
+  .first,
+  .second,
+  .third,
+  .fourth,
+  .fifth {
+    display: none;
   }
 }
-
-@keyframes fourth {
-  from {
-    top: -100vh;
-  }
-  to {
-    top: 0;
-  }
-}
-
-.main .fourth:hover {
-  width: 80%;
-}
-
-.main .fourth:hover::after {
-  content: "Strategy";
-  width: 50%;
-  height: 10%;
-  background-color: #00ff55;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  color: white;
-}
-
-.main .fifth {
-  position: relative;
-  background-image: url("./fullSize/5.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  -webkit-transition: 1s ease;
-  transition: 1s ease;
-  -webkit-animation: fifth 1.4s ease-in-out;
-          animation: fifth 1.4s ease-in-out;
-  z-index: 99;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  cursor: pointer;
-}
-
-@-webkit-keyframes fifth {
-  from {
-    top: -100vh;
-  }
-  to {
-    top: 0;
-  }
-}
-
-@keyframes fifth {
-  from {
-    top: -100vh;
-  }
-  to {
-    top: 0;
-  }
-}
-
-.main .fifth:hover {
-  width: 80%;
-}
-
-.main .fifth:hover::after {
-  content: "Adventure";
-  width: 50%;
-  height: 10%;
-  background-color: #00ff55;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2rem;
-  color: white;
-}
-
-.main .first,
-.main .second,
-.main .third,
-.main .fourth,
-.main .fifth {
-  display: none;
-}
-
 .main > div {
   width: 20%;
   height: 100vh;
 }
-/*# sourceMappingURL=main.css.map */
+
+@media only screen and (max-width: 550px) {
+  .main {
+    .first:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+    .second:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+    .third:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+    .fourth:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+    .fifth:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}
