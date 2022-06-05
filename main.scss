@@ -232,3 +232,33 @@
   width: 20%;
   height: 100vh;
 }
+
+@media only screen and (max-width: 550px) {
+  .main {
+    .first:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+    .second:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+    .third:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+    .fourth:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+    .fifth:hover {
+      &::after {
+        font-size: 1rem !important;
+      }
+    }
+  }
+}
